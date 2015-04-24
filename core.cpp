@@ -15,7 +15,8 @@
 #include "tftp.h"
 static tftp tftpServer;
 #else
-#include <wiringPi.h>
+//#include <wiringPi.h>
+#include "wiringNull.h"
 #include <unistd.h>
 #endif
 

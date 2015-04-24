@@ -18,7 +18,7 @@ sprinklers_pi.cpp \
 sysreset.cpp \
 web.cpp 
 
-LIBS := -lsqlite3 -lwiringPi
+LIBS := -lsqlite3
 LIBNAME=sprinklers_pi
 
 OBJS=$(CPP_SRCS:%.cpp=$(BUILD_DIR)/%.o)
@@ -58,7 +58,7 @@ endif
 	mkdir -p /usr/local/etc
 	mkdir -p /usr/local/etc/sprinklers_pi
 	update-rc.d sprinklers_pi defaults
-	
+
 	@echo "done"
 
 upgrade: install
